@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background: url(img/fondo.webp);
+    background-size: cover;
+    height: 100vh;
+}
+
+table{
+    margin-bottom: 10px !important;
+}
+
+input, select{
+    height: 50px;
+    font-size: 20px !important;
+}
+
+span, label{
+    font-size: 20px !important;
+}
+
+.container-principal{
+    gap: 50px;
+    padding-top: 50px;
+}
+
+.container-primero{
+    width: 30vw;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #777;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.container-segundo{
+    width: 70vw;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #777;
+    margin-bottom: 80px;
+}
+
+h1{
+    font-size: clamp(1rem,3rem,4rem);
+    text-align: center;
+    padding: 20px 0;
+}
+
+h2{
+    font-size:  clamp(1rem,2.3rem,3rem);
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+
+td, th{
+    padding: 20px 15px !important;
+    font-size: 22px;
+}
+
+.table-light{
+    border-color: #f8f9fa;
+}
+
+.bi-trash3:hover{
+    cursor: pointer;
+    color: #777;
+}

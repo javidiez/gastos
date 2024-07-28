@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- STYLES -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courgette&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>App Gastos</title>
+</head>
+
+<body>
+    <div class="container-principal container-fluid d-flex align-items-start justify-content-center">
+        <div class="container-primero bg-light">
+            <h2>ALTA DE GASTOS / INGRESOS</h2>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Descripción</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="descripcion">
+            </div>
+
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">Categoría</label>
+                <select class="form-select" id="categoria">
+                    <option value="Supermercado">Supermercado</option>
+                    <option value="Restaurantes">Restaurantes</option>
+                    <option value="Cine">Cine</option>
+                    <option value="Deudas">Deudas</option>
+                    <option value="Ocio">Ocio</option>
+                    <option value="Impuestos">Impuestos</option>
+                    <option value="Estudios">Estudios</option>
+                    <option value="Salud">Salud</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+            <div class="d-flex gap-5 mb-3 ms-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioingreso" checked>
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Ingreso
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="radiogasto">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Gasto
+                </label>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">€</span>
+                <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="100.50" id="importe">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="date">Fecha</span>
+                <input type="date" class="form-control" aria-label="Date" aria-describedby="addon-wrapping" id="fecha">
+              </div>
+            <button type="button" class="btn btn-primary btn-lg" id="boton">Guardar</button>
+
+        </div>
+        <div class="container-segundo table-responsive">
+                <h1>GASTOS / INGRESOS</h1>
+
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Importe</th>
+                            <th scope="col"></th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider" id="tabla">
+                        <!-- <tr>
+                            <td class="table-success">Cobro de deuda a Juan Perez</td>
+                            <td class="table-success">Otros</td>
+                            <td class="table-success">01/05/2025</td>
+                            <td class="table-success">120 €</td>
+                            <td class="table-success"><i class="bi bi-trash3"></i></td>
+                        </tr> -->
+                        <!-- <tr>
+                            <td class="table-danger">Compra del mes Mercadona</td>
+                            <td class="table-danger">Supermercado</td>
+                            <td class="table-danger">-150 €</td>
+                            <td class="table-danger"><i class="bi bi-trash3"></i></td>
+
+                        </tr> -->
+
+                    </tbody>
+                    <tfoot>
+                        <tr class="fw-bold" >
+                            <td class="table-light fs-3">TOTAL</td>
+                            <td class="table-light"></td>
+                            <td class="table-light"></td>
+                            <td class="table-light fs-3" id="total"></td>
+                            <td class="table-light"></td>
+
+                        </tr>
+                    </tfoot>
+                </table>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
